@@ -46,6 +46,10 @@ namespace TeamProject
             {
                 Parmanov.Parm();
             }
+            if (cons == "z")
+            {
+                Zhilkin.Zhilla();
+            }
         }
 
         public static void ext_sel()
