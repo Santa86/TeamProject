@@ -50,6 +50,10 @@ namespace TeamProject
             {
                 Zhilkin.Zhilla();
             }
+            if (cons == "e")
+            {
+                Edapin.Santa();
+            }
         }
 
         public static void ext_sel()
