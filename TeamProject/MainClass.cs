@@ -22,15 +22,6 @@ namespace TeamProject
             Console.WriteLine("");
         }
 
-        public static void delenie(int n)
-        {
-            for(int i = 0; i < 5; i++)
-                for (int k = 0; k < 5; k++)
-                {
-                    Matrix2[i,k] = Matrix[i,k]/n;
-                }
-        }
-
         public static void display(int[,] matr)
         {
             for(int i = 0; i < 5; i++)
@@ -45,6 +36,32 @@ namespace TeamProject
                         Console.WriteLine("{0}", matr[i, k]);
                     }
                 }
+        }
+
+        public static void select()
+        {
+            Console.Write("Чей проект выхотите запустить? (Парманов = p, Жилкин = z, Едапин = e)  ");
+            string cons = Console.ReadLine();
+            if (cons == "p")
+            {
+                Parmanov.Parm();
+            }
+        }
+
+        public static void ext_sel()
+        {
+            Console.Write("Вы хотите продолжить? (y/n) ");
+            string cont = Console.ReadLine();
+            if (cont == "y")
+            {
+                select();
+                ext_sel();
+            }
+            if (cont == "n")
+            {
+                Console.Write("Press any key to continue . . . ");
+                Console.ReadKey(true);
+            }
         }
     }
 }

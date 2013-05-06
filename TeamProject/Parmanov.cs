@@ -7,9 +7,19 @@ namespace TeamProject
 {
     class Parmanov
     {
+        public static void delenie(int n)
+        {
+            Console.WriteLine("Деление на {0}", n);
+            for (int i = 0; i < 5; i++)
+                for (int k = 0; k < 5; k++)
+                {
+                    MainClass.Matrix2[i, k] = MainClass.Matrix[i, k] / n;
+                }
+        }
+
         public static void Parm()
         {
-            MainClass.delenie(2);
+            delenie(2);
             MainClass.display(MainClass.Matrix2);
         }
     }
